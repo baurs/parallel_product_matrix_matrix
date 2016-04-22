@@ -8,3 +8,8 @@ Very big matrices are represented as 4D arrays (block matrices). This allows to 
 M(i,j,I,J) = M((I-1)n/p+i,(J-1)n/p+j) where n is the number of line of the matrix (= its number of columns)
 
 Note : it only works with square matrices and they are generated randomly. Besides, the size of the matrix has to be divisible par p², where p² is the number of processors that will compute the product
+
+
+To run the code : 
+mpiexec –localonly [number_of_processors] matrix_matrix_product.exe [dimension]
+Note : dimension should be equals to a perfect square (4,9,16,25,36...)
